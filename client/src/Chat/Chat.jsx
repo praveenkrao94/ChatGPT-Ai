@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './style.css'
+import Logout from './Logout'
 
 function Chat() {
 
@@ -91,8 +92,8 @@ function Chat() {
     <ul className='history' >
      {uniqueTitles?.map((uniqueTitle,index) => <li key={index} onClick={() =>handleClick(uniqueTitle)} >{uniqueTitle}</li>)}
     </ul>
-      <nav>
-        <p>Made by prmax</p>
+      <nav className=''>
+        <Logout/>
       </nav>
    
       </section>

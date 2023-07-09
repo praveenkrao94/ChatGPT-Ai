@@ -26,7 +26,7 @@ function Register() {
   }
 
   return (
-    <div className="bg-blue-900 h-screen">
+    <div className="bg-gray-900 h-screen">
         <div className="login-box">
                     <div className='flex justify-center items-center'>
             <div className='flex flex-col items-center'>
