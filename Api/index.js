@@ -20,6 +20,8 @@ const CookieParser = require("cookie-parser");
 
 const jwtSecret = process.env.JWT_SECRET;
 
+const api_key = "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"
+
 const jwt = require("jsonwebtoken");
 
 app.use(express.urlencoded({ extended: true }));
@@ -35,7 +37,9 @@ app.use(cors(corsOptions));
 
 app.use(CookieParser());
 
-//! Connect to MongoDB
+
+//~ Connect to MongoDB
+
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => {
@@ -45,8 +49,34 @@ mongoose
     console.error("Failed to connect to MongoDB:", error);
   });
 
-  //! ----------end of mongo connect ------------------------
+  //~ ----------end of mongo connect ------------------------
 
+
+
+    //* gpt Route //
+
+  app.post('/completions' , async (req,res)=>{
+    const options = {
+      method:'POST',
+      headers:{
+        'Authorization': `Bearer ${api_key}`,
+        'Content-Type': "application/json"
+      },
+      body:JSON.stringify({
+        model:'gpt-3.5-turbo',
+        messages:[{role:'user' , content:req.body.message}],
+        max_tokens:100,
+      })
+    }
+          try{
+        const response = await fetch('https://api.openai.com/v1/chat/completions', options)
+        const data = await response.json()
+        res.send(data)
+          }
+          catch(err){
+            console.log(err)
+          }
+  })
 
 
 
