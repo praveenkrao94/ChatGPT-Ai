@@ -113,3 +113,13 @@ input:focus{
         font-size: 35px;
 }
 
+
+.feed {
+        overflow: scroll;
+        width: 100%;
+        padding: 0;
+}
+
+.feed li{
+  display: flex;
+}

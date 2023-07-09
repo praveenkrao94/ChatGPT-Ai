@@ -21,7 +21,10 @@ function Chat() {
 
   }
 
-  
+  const handleClick = (uniqueTitle)=>{
+    setCurrentTitle(uniqueTitle)
+   
+      }
 
 
   const getMessages = async()=>{                   //~ function for handle api
@@ -36,9 +39,9 @@ function Chat() {
     }
     try{
       const res =  await fetch('http://localhost:4050/completions', options)
-      const data= await res.json()
-      // console.log(data , 'data')
-      setMessage(data.choices[0].message)
+      const data = await res.json()
+      console.log(data , 'data')
+      setMessage(data?.choices[0].message)
     }
     catch(err){
       console.log(err)
@@ -85,7 +88,7 @@ function Chat() {
       <section className='side-bar'>   
     <button onClick={createNewChat} >+ New Chat</button>
     <ul className='history' >
-     {uniqueTitles?.map((uniqueTitle,index) => <li key={index}>{uniqueTitle}</li>)}
+     {uniqueTitles?.map((uniqueTitle,index) => <li key={index} onClick={() =>handleClick(uniqueTitle)} >{uniqueTitle}</li>)}
     </ul>
       <nav>
         <p>Made by prmax</p>
@@ -99,7 +102,7 @@ function Chat() {
       <ul className='feed' >
        {currentChat?.map((chatMessage,index)=> <li key={index}>
         <p className='role'>{chatMessage.role}</p>
-        <p>{chatMessage.message}</p>
+        <p>{chatMessage.content}</p>
        </li>)}
       </ul>
 

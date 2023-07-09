@@ -20,7 +20,7 @@ const CookieParser = require("cookie-parser");
 
 const jwtSecret = process.env.JWT_SECRET;
 
-const api_key = "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"
+const api_key = "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"
 
 const jwt = require("jsonwebtoken");
 
