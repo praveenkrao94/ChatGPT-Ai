@@ -42,6 +42,7 @@ function Chat() {
       const data = await res.json()
       console.log(data , 'data')
       setMessage(data?.choices[0].message)
+      
     }
     catch(err){
       console.log(err)
