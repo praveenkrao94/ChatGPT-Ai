@@ -95,20 +95,57 @@
   }
   
   /* Media queries for smaller devices */
-  @media (max-width: 767px) {
-    .login-box {
-      width: 90%;
-      max-width: 400px;
-    }
+@media (max-width: 767px) {
+  .login-box {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px; /* Adjust padding for smaller devices */
   }
-  
-  /* Media queries for medium devices */
-  @media (min-width: 768px) and (max-width: 991px) {
-    .login-box {
-      width: 70%;
-      max-width: 400px;
-    }
+
+  .login-box h2 {
+    font-size: 20px; /* Adjust font size for heading */
   }
-  
-  /* Animation keyframes and other styles omitted for brevity */
+
+  .login-box .user-box input {
+    font-size: 14px; /* Adjust font size for user input */
+  }
+
+  .login-box .btnCls {
+    font-size: 14px; /* Adjust font size for login button */
+    margin-top: 20px; /* Adjust margin top for login button */
+  }
+}
+
+/* Media queries for tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .login-box {
+    width: 70%;
+    max-width: 400px;
+    padding: 30px; /* Adjust padding for tablets */
+  }
+}
+
+/* Media queries for medium devices */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .login-box {
+    /* Adjust width and max-width for tablet landscape */
+    width: 60%;
+    max-width: 600px;
+    padding: 40px; /* Adjust padding for tablet landscape */
+  }
+
+  .login-box h2 {
+    font-size: 24px; /* Adjust font size for heading in tablet landscape */
+  }
+
+  .login-box .user-box input {
+    font-size: 16px; /* Adjust font size for user input in tablet landscape */
+  }
+
+  .login-box .btnCls {
+    font-size: 16px; /* Adjust font size for login button in tablet landscape */
+    margin-top: 30px; /* Adjust margin top for login button in tablet landscape */
+  }
+}
+
   
