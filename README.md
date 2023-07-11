@@ -12,7 +12,7 @@ https://github.com/praveenkrao94/ChatGPT-Ai/assets/126244668/9594c55c-4ecd-465b-
 
 <h2>Features</h2>
 <ul>
-  <li> <h3>Live Chat:</h3> <span>Users can engage in real-time conversations, exchanging messages instantly through WebSocket communication.</span> </li>
+  <li> <h3>Live Chat:</h3> <span>Users can engage in real-time conversations, exchanging messages instantly through ChatGPt</span> </li>
   <li> <h3>User Authentication:</h3> <span>The application ensures secure user authentication using JWT tokens, providing a seamless login and registration process.</span> </li>
   <li> <h3>User Management: </h3> <span>Users can create new accounts, login, and manage their profiles.</span> </li>
   
